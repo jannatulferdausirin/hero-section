@@ -1,0 +1,173 @@
+/* -------------------------
+common css start here 
+---------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --white: #ffffff;
+  --black: #0a0c19;
+  --blue: #1b1938;
+  --purple: #aa5cdb;
+  --gray: #d9d9d9;
+  --primary-font: "Inter", sans-serif;
+  --secondary-font: "Lexend Deca", sans-serif;
+}
+/* common css end here */
+/* ---------------------
+ main css start here
+---------------------- */
+.container {
+  background-color: black;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.main_card {
+  display: flex;
+  height: 60vh;
+  width: 70%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.card_left {
+  width: 50%;
+  height: 100%;
+  background-color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  padding: 50px;
+}
+.card_text h2 {
+  color: var(--white);
+  font-family: var(--primary-font);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.span {
+  color: var(--purple);
+  font-family: var(--primary-font);
+  font-size: 32px;
+  font-weight: 700;
+}
+.card_text p {
+  color: var(--white);
+  font-family: var(--primary-font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  padding-right: 50px;
+}
+.card_right {
+  width: 50%;
+  height: 100%;
+}
+.card_right img {
+  width: 100%;
+  height: 100%;
+}
+.card_number {
+  display: flex;
+}
+.card_number h3 {
+  color: var(--white);
+  font-family: var(--primary-font);
+  font-size: 24px;
+  font-weight: 700;
+}
+.card_number p {
+  color: var(--white);
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: 20px;
+}
+/* main css end here */
+
+/*--------------------------------
+ media query start here 
+ -----------------------------------*/
+@media only screen and (max-width: 1100px) {
+  .card_left {
+    width: 75%;
+  }
+  .card_right {
+    width: 25%;
+  }
+  .card_text p {
+    margin-right: 10px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .main_card {
+    height: 90vh;
+    flex-direction: column-reverse;
+  }
+  .card_text h2,
+  .span {
+    font-size: 1.5rem;
+    margin-top: 25px;
+    text-align: center;
+  }
+  .card_left {
+    width: 100%;
+    height: 45vh;
+  }
+  .card_number {
+    margin-bottom: 15px;
+  }
+  .card_text p {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .card_right {
+    width: 100%;
+    height: 45vh;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .card_number h3
+  {
+    font-size: 20px;
+  }
+  .card_number p{
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .card_left {
+    height: 70%;
+    padding: 25px;
+  }
+  .card_right {
+    height: 30%;
+  }
+  .card_text h2,
+  .span {
+    font-size: 1.5rem;
+  }
+
+  .card_number h3 {
+    font-size: 1rem;
+  }
+  .card_number p {
+    font-size: 10px;
+    margin-right: 10px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .card_number{
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+/*  media query end here  */
